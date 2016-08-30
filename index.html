@@ -7,19 +7,18 @@
   </head>
   <body>
       <main class="main-wrapper" ng-controller="mainCtrl">
-        <button class="button" ng-click="addQuote()">Add Quote</button>
-        <button class="button" ng-click="removeQuote()">Remove Quote</button>
-        <button class="button" ng-click="changeFilter">Filter Quotes</button>
 
         <br />
         <br />
-
         <input type="text" placeholder="Text" ng-model="text" />
         <input type="text" placeholder="Author" ng-model="author" />
+          <button class="button" ng-click="addQuote()">+</button>
         <div class="card" ng-repeat="quote in quotes">
           {{quote.text}}
           <br /><br />
           - {{quote.author}}
+          <br />
+          <button class="button" ng-click="removeQuote()">-</button>
         </div>
       </main>
 
